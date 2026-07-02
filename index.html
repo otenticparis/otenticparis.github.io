@@ -1,279 +1,276 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>FANJA - Boutique en ligne</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:#fafafa;
-    color:#333;
-}
-
-header{
-    background:#d63384;
-    color:white;
-    padding:20px 10%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-header h1{
-    letter-spacing:3px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    font-weight:bold;
-}
-
-.hero{
-    height:75vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-    url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80");
-    background-size:cover;
-    background-position:center;
-    color:white;
-}
-
-.hero h2{
-    font-size:55px;
-}
-
-.hero p{
-    margin-top:20px;
-    font-size:22px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:35px;
-    background:#d63384;
-    color:white;
-    padding:15px 35px;
-    text-decoration:none;
-    border-radius:30px;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#b61f6e;
-}
-
-section{
-    padding:70px 10%;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:35px;
-    color:#d63384;
-}
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
-}
-
-.card img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-}
-
-.card-body{
-    padding:20px;
-}
-
-.price{
-    color:#d63384;
-    font-size:24px;
-    font-weight:bold;
-    margin:10px 0;
-}
-
-.buy{
-    display:block;
-    background:#d63384;
-    color:white;
-    text-align:center;
-    text-decoration:none;
-    padding:12px;
-    border-radius:5px;
-}
-
-.about{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-    line-height:1.7;
-}
-
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:30px;
-    margin-top:50px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>FANJA</h1>
-
-<nav>
-<a href="#produits">Produits</a>
-<a href="#apropos">À propos</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div>
-
-<h2>Bienvenue chez FANJA</h2>
-
-<p>La boutique élégante qui sublime votre quotidien.</p>
-
-<a href="#produits" class="btn">Découvrir nos produits</a>
-
-</div>
-
-</section>
-
-<section id="produits">
-
-<h2 class="title">Nos produits</h2>
-
-<div class="products">
-
-<div class="card">
-
-<img src="https://picsum.photos/400/300?random=1">
-
-<div class="card-body">
-
-<h3>Sac Élégance</h3>
-
-<p>Un sac moderne et raffiné.</p>
-
-<div class="price">120 000 Ar</div>
-
-<a href="#" class="buy">Commander</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://picsum.photos/400/300?random=2">
-
-<div class="card-body">
-
-<h3>Robe Chic</h3>
-
-<p>Pour toutes les occasions.</p>
-
-<div class="price">95 000 Ar</div>
-
-<a href="#" class="buy">Commander</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://picsum.photos/400/300?random=3">
-
-<div class="card-body">
-
-<h3>Accessoires</h3>
-
-<p>La touche finale de votre style.</p>
-
-<div class="price">35 000 Ar</div>
-
-<a href="#" class="buy">Commander</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="apropos">
-
-<h2 class="title">À propos</h2>
-
-<p class="about">
-
-FANJA est une boutique en ligne dédiée aux femmes modernes.
-Nous sélectionnons avec soin des articles de qualité afin de proposer
-des produits élégants, tendances et accessibles.
-
-</p>
-
-</section>
-
-<section id="contact">
-
-<h2 class="title">Contact</h2>
-
-<div class="about">
-
-<p><strong>Facebook :</strong> FANJA Boutique</p>
-
-<p><strong>WhatsApp :</strong> +261 XX XX XXX XX</p>
-
-<p><strong>Email :</strong> contact@fanja.mg</p>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 FANJA - Tous droits réservés.
-
-</footer>
-
-</body>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FANJA - Boutique en ligne</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#fafafa;
+            color:#333;
+        }
+
+        header{
+            background:#d63384;
+            color:white;
+            padding:20px 10%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        header h1{
+            letter-spacing:3px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:25px;
+            font-weight:bold;
+        }
+
+        .hero{
+            height:75vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+            url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80");
+            background-size:cover;
+            background-position:center;
+            color:white;
+        }
+
+        .hero h2{
+            font-size:55px;
+        }
+
+        .hero p{
+            margin-top:20px;
+            font-size:22px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:35px;
+            background:#d63384;
+            color:white;
+            padding:15px 35px;
+            text-decoration:none;
+            border-radius:30px;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#b61f6e;
+        }
+
+        section{
+            padding:70px 10%;
+        }
+
+        .title{
+            text-align:center;
+            margin-bottom:40px;
+            font-size:35px;
+            color:#d63384;
+        }
+
+        .products{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:white;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 5px 15px rgba(0,0,0,.12);
+        }
+
+        .card img{
+            width:100%;
+            height:280px;
+            object-fit:cover;
+        }
+
+        .card-body{
+            padding:20px;
+        }
+
+        .price{
+            color:#d63384;
+            font-size:24px;
+            font-weight:bold;
+            margin:10px 0;
+        }
+
+        .buy{
+            display:block;
+            background:#d63384;
+            color:white;
+            text-align:center;
+            text-decoration:none;
+            padding:12px;
+            border-radius:5px;
+        }
+
+        .about{
+            text-align:center;
+            max-width:800px;
+            margin:auto;
+            line-height:1.7;
+        }
+
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:50px;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        #topButton{
+
+            position:fixed;
+            bottom:25px;
+            right:25px;
+            width:55px;
+            height:55px;
+            background:#d63384;
+            color:white;
+            text-decoration:none;
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:28px;
+            box-shadow:0 5px 15px rgba(0,0,0,.3);
+            opacity:0;
+            visibility:hidden;
+            transition:.4s;
+        }
+
+        #topButton.show{
+            opacity:1;
+            visibility:visible;
+        }
+
+        #topButton:hover{
+            background:#b61f6e;
+            transform:translateY(-5px);
+        }
+
+    </style>
+
+    </head>
+
+    <body>
+        <header>
+            <h1>FANJA</h1>
+            <nav>
+                <a href="#produits">Produits</a>
+                <a href="#apropos">À propos</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div>
+            <h2>Bienvenue chez FANJA</h2>
+            <p>La boutique élégante qui sublime votre quotidien.</p>
+            <a href="#produits" class="btn">Découvrir nos produits</a>
+            </div>
+        </section>
+
+        <section id="produits">
+            <h2 class="title">Nos produits</h2>
+            <div class="products">
+                <div class="card">
+                    <img src="https://picsum.photos/400/300?random=1">
+                <div class="card-body">
+                    <h3>Sac Élégance</h3>
+                    <p>Un sac moderne et raffiné.</p>
+                    <div class="price">120 000 Ar</div>
+                    <a href="#" class="buy">Commander</a>
+                </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://picsum.photos/400/300?random=2">
+                    <div class="card-body">
+                        <h3>Robe Chic</h3>
+                        <p>Pour toutes les occasions.</p>
+                        <div class="price">95 000 Ar</div>
+                        <a href="#" class="buy">Commander</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/400/300?random=3">
+                    <div class="card-body">
+                        <h3>Accessoires</h3>
+                        <p>La touche finale de votre style.</p>
+                        <div class="price">35 000 Ar</div>
+                        <a href="#" class="buy">Commander</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="apropos">
+
+            <h2 class="title">À propos</h2>
+            <p class="about">
+                FANJA est une boutique en ligne dédiée aux femmes modernes.
+                Nous sélectionnons avec soin des articles de qualité afin de proposer
+                des produits élégants, tendances et accessibles.
+            </p>
+
+        </section>
+
+        <section id="contact">
+            <h2 class="title">Contact</h2>
+            <div class="about">
+            <p><strong>Facebook :</strong> FANJA Boutique</p>
+            <p><strong>WhatsApp :</strong> +261 XX XX XXX XX</p>
+            <p><strong>Email :</strong> contact@fanja.mg</p>
+            </div>
+        </section>
+
+        <footer>
+            <a href="#" id="topButton">↑</a>
+        © 2026 FANJA - Tous droits réservés.
+
+        </footer>
+
+        <script>
+            const topButton = document.getElementById("topButton");
+            window.addEventListener("scroll", ()=>{
+                if(window.scrollY>300){
+                    topButton.classList.add("show");
+                }else{
+                    topButton.classList.remove("show");
+                }
+            });
+
+         </script>
+    </body>
 </html>
