@@ -1,180 +1,202 @@
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        body{
-            background:#fafafa;
-            color:#333;
-        }
-        header{
-            background:#d63384;
-            color:white;
-            padding:20px 10%;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
+body{
+    background:#fafafa;
+    color:#333;
+}
 
-            /*Static nav bar*/
-            position:sticky;
-            top:0;
-            z-index:1000;
-            background:#d63384;
-            color:white;
-            padding:20px 10%;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            box-shadow:0 2px 10px rgba(0,0,0,.15);
-        }
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#d63384; /* Retour au rose d'origine */
+    padding:10px 10%; /* Légèrement réduit pour ajuster le logo */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+    height: 120px;
+}
 
-        header h1{
-            letter-spacing:3px;
-        }
+/* --- STYLISATION DU LOGO TRANSPARENT --- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin-left:25px;
-            font-weight:bold;
-        }
+.logo-img {
+    height: 55px; /* Ajuste la taille du logo */
+    width: auto;
+    object-fit: contain;
+    
+    /* L'ASTUCE : Ce filtre inverse les couleurs du logo (le noir devient blanc) */
+    /* Ainsi, ton logo transparent ressortira magnifiquement en blanc sur le fond rose ! */
+    filter: invert(1) brightness(2); 
+}
 
-        .hero{
-            height:75vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-            url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80");
-            background-size:cover;
-            background-position:center;
-            color:white;
-        }
+/* Masque le texte pour le SEO Google */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
 
-        .hero h2{
-            font-size:55px;
-        }
+/* --- NAVIGATION --- */
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+}
 
-        .hero p{
-            margin-top:20px;
-            font-size:22px;
-        }
+/* --- HERO SECTION --- */
+.hero{
+    height:75vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
 
-        .btn{
-            display:inline-block;
-            margin-top:35px;
-            background:#d63384;
-            color:white;
-            padding:15px 35px;
-            text-decoration:none;
-            border-radius:30px;
-            transition:.3s;
-        }
+.hero h2{
+    font-size:55px;
+}
 
-        .btn:hover{
-            background:#b61f6e;
-        }
+.hero p{
+    margin-top:20px;
+    font-size:22px;
+}
 
-        section{
-            padding:70px 10%;
-        }
+/* --- BOUTONS --- */
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    background:#d63384; /* Retour au rose */
+    color:white;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
 
-        .title{
-            text-align:center;
-            margin-bottom:40px;
-            font-size:35px;
-            color:#d63384;
-        }
+.btn:hover{
+    background:#b61f6e;
+}
 
-        .products{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:30px;
-        }
+section{
+    padding:70px 10%;
+}
 
-        .card{
-            background:white;
-            border-radius:10px;
-            overflow:hidden;
-            box-shadow:0 5px 15px rgba(0,0,0,.12);
-        }
+.title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:35px;
+    color:#d63384; /* Retour au rose */
+}
 
-        .card img{
-            width:100%;
-            height:280px;
-            object-fit:cover;
-        }
+/* --- PRODUITS --- */
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
 
-        .card-body{
-            padding:20px;
-        }
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
 
-        .price{
-            color:#d63384;
-            font-size:24px;
-            font-weight:bold;
-            margin:10px 0;
-        }
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
 
-        .buy{
-            display:block;
-            background:#d63384;
-            color:white;
-            text-align:center;
-            text-decoration:none;
-            padding:12px;
-            border-radius:5px;
-        }
+.card-body{
+    padding:20px;
+}
 
-        .about{
-            text-align:center;
-            max-width:800px;
-            margin:auto;
-            line-height:1.7;
-        }
+.price{
+    color:#d63384; /* Retour au rose */
+    font-size:24px;
+    font-weight:bold;
+    margin:10px 0;
+}
 
-        footer{
-            background:#222;
-            color:white;
-            text-align:center;
-            padding:30px;
-            margin-top:50px;
-        }
+.buy{
+    display:block;
+    background:#d63384; /* Retour au rose */
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    padding:12px;
+    border-radius:5px;
+}
 
-        html{
-            scroll-behavior: smooth;
-        }
+.about{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    line-height:1.7;
+}
 
-        #topButton{
+footer{
+    background:#d63384;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
 
-            position:fixed;
-            bottom:25px;
-            right:25px;
-            width:55px;
-            height:55px;
-            background:#d63384;
-            color:white;
-            text-decoration:none;
-            border-radius:50%;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-size:28px;
-            box-shadow:0 5px 15px rgba(0,0,0,.3);
-            opacity:0;
-            visibility:hidden;
-            transition:.4s;
-        }
+html{
+    scroll-behavior: smooth;
+}
 
-        #topButton.show{
-            opacity:1;
-            visibility:visible;
-        }
+/* --- BOUTON EN HAUT --- */
+#topButton{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:55px;
+    height:55px;
+    background:#d63384; /* Retour au rose */
+    color:white;
+    text-decoration:none;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    opacity:0;
+    visibility:hidden;
+    transition:.4s;
+}
 
-        #topButton:hover{
-            background:#b61f6e;
-            transform:translateY(-5px);
-        }
+#topButton.show{
+    opacity:1;
+    visibility:visible;
+}
+
+#topButton:hover{
+    background:#b61f6e;
+    transform:translateY(-5px);
+}
