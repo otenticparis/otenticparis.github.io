@@ -22,30 +22,29 @@ body{
    HEADER
 ========================== */
 
-/*header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#F8F3EC;
-    border-bottom:1px solid #E5D2B2;
-    padding:10px 10%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-}*/
-
 header {
-    position: absolute; /* Rendu transparent par-dessus l'image hero */
+    position: fixed; /* Rend le navbar fixe pendant le défilement */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     padding: 20px 5%;
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Sépare proprement Gauche / Milieu / Droite */
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    
+    /* Transition fluide pour l'apparition du fond lors du défilement */
+    background: transparent;
+    transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Cette classe sera ajoutée dynamiquement par JavaScript lors du scroll */
+header.scrolled {
+    background: rgba(248, 243, 236, 0.95); /* Le fond crème vintage de votre site avec une légère transparence */
+    padding: 12px 5%; /* Le menu devient légèrement plus fin au scroll pour gagner de la place */
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08); /* Ajout d'une ombre douce pour détacher le menu du contenu */
+    border-bottom: 1px solid #E5D2B2;
 }
 
 header h1{
@@ -61,29 +60,6 @@ header h1{
 /* ==========================
    LOGO
 ========================== */
-
-/*.logo-container{
-    display:flex;
-    align-items:center;
-    text-decoration:none;
-}
-
-.logo-img{
-    height:60px;
-    width:auto;
-    object-fit:contain;
-}
-
-.sr-only{
-    position:absolute;
-    width:1px;
-    height:1px;
-    padding:0;
-    margin:-1px;
-    overflow:hidden;
-    clip:rect(0,0,0,0);
-    border:0;
-}*/
 
 .logo-centered {
     display: flex;
@@ -134,18 +110,6 @@ header h1{
 /* ==========================
    NAVIGATION
 ========================== */
-
-/*nav a{
-    color:#1F1F1F;
-    text-decoration:none;
-    margin-left:25px;
-    font-weight:600;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#C9A66B;
-}*/
 
 nav.nav-left {
     display: flex;
