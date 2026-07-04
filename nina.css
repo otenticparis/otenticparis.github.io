@@ -437,3 +437,67 @@ footer{
     margin-left: 4px;
     font-weight: bold;
 }
+/* ========================================================
+   RESPONSIVE : AJUSTEMENTS POUR ÉCRANS MOBILES (max 768px)
+=========================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Ajustement du Header sur Mobile */
+    header {
+        display: flex;
+        flex-direction: column; /* Aligne le logo au-dessus et les menus en dessous */
+        gap: 10px;
+        padding: 10px 2%;
+        text-align: center;
+    }
+    
+    header.scrolled {
+        padding: 8px 2%;
+    }
+
+    /* Regroupe les deux blocs de navigation pour qu'ils tiennent sur une seule ligne */
+    nav.nav-left, 
+    .nav-right-container {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0 8px; /* Réduit l'espace entre les liens pour éviter qu'ils sortent de l'écran */
+        font-size: 11px;
+    }
+
+    .logo-img {
+        height: 40px; /* Réduit légèrement la taille du logo */
+    }
+
+    .brand-name {
+        font-size: 26px; /* Évite que le texte du logo déborde */
+    }
+
+    /* 2. Réajustement des textes du Hero */
+    .hero {
+        padding: 140px 5% 40px 5%; /* Donne plus d'espace en haut pour le header mobile */
+        justify-content: center;   /* Centre le texte sur mobile pour un meilleur confort visuel */
+    }
+
+    .hero-content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 32px; /* Réduit la taille du gros titre pour qu'il tienne sans forcer */
+        line-height: 1.3;
+    }
+
+    .hero-desc {
+        font-size: 16px;
+    }
+    
+    .btn-hero {
+        width: 100%; /* Le bouton prend toute la largeur sur mobile, style très moderne */
+        max-width: 300px;
+        padding: 15px 20px;
+    }
+}
