@@ -9,18 +9,6 @@
     <link rel="stylesheet" href=nina.css>
 
     <body>
-        <!--<header>
-            <h1>OTENTICPARIS</h1>
-                <a href="#" class="logo-container">
-                <img src="logo-otenticparis.png" alt="OTENTICPARIS Logo" class="logo-img">
-                <span class="sr-only">OTENTICPARIS</span>
-            </a>
-            <nav>
-                <a href="#produits">Produits</a>
-                <a href="#apropos">À propos</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>-->
 
         <header>
             <!-- Groupe de navigation Gauche -->
@@ -64,15 +52,6 @@
                 </div>
             </div>
         </header>
-
-
-        <!--<section class="hero">
-            <div>
-            <h2>Chaque création naît de nos mains pour traverser le temps</h2>
-            <p>L'Art de Paris, façonné à la main.</p>
-            <a href="#produits" class="btn">Découvrir nos produits</a>
-            </div>
-        </section>-->
 
         <section class="hero">
             <div class="hero-content">
@@ -149,14 +128,23 @@
 
         <script>
             const topButton = document.getElementById("topButton");
-            window.addEventListener("scroll", ()=>{
-                if(window.scrollY>300){
+            const header = document.querySelector("header"); // On sélectionne le header
+
+            window.addEventListener("scroll", () => {
+                // Gestion du topButton
+                if (window.scrollY > 300) {
                     topButton.classList.add("show");
-                }else{
+                } else {
                     topButton.classList.remove("show");
                 }
-            });
 
+                // GESTION DU NAVBAR FIXE : Dès qu'on défile de plus de 20px, on applique le fond
+                if (window.scrollY > 20) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
          </script>
     </body>
 </html>
