@@ -360,6 +360,24 @@ section{
     font-size:18px;
 }
 
+.about-columns{
+    max-width:1200px;
+    margin:0 auto;
+    column-count:2;
+    column-gap:60px;
+    column-rule:1px solid rgba(0,0,0,.08);
+}
+
+.about-columns p{
+    margin:0;
+    text-align:justify;
+    line-height:1.9;
+    color:#444;
+    font-size:18px;
+    orphans:3;
+    widows:3;
+}
+
 /* ==========================
    FOOTER
 ========================== */
@@ -437,6 +455,7 @@ footer{
     margin-left: 4px;
     font-weight: bold;
 }
+
 /* ========================================================
    RESPONSIVE : AJUSTEMENTS POUR ÉCRANS MOBILES (max 768px)
 =========================================================== */
@@ -499,5 +518,20 @@ footer{
         width: 100%; /* Le bouton prend toute la largeur sur mobile, style très moderne */
         max-width: 300px;
         padding: 15px 20px;
+    }
+
+      /* ==========================
+       A PROPOS
+    ========================== */
+
+    .about-columns{
+        column-count:1;
+        column-gap:0;
+        column-rule:none;
+    }
+
+    .about-columns p{
+        font-size:16px;
+        line-height:1.8;
     }
 }
