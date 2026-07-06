@@ -169,7 +169,7 @@ nav a:hover {
         url("hero.png");
 
     background-size:cover;
-    background-position:center;
+    background-position:left center;
     background-repeat:no-repeat;
 }
 
@@ -670,13 +670,13 @@ footer{
     }
 
     .hero {
-        padding: 140px 5% 40px 5%;
+        padding: 150px 5% 40px 5%;
         justify-content: center;
-       background-position: left center;
+        background-position:70% center;
     }
 
     .hero-content {
-        text-align: center;
+        text-align: left;
         max-width: 100%;
     }
 
